@@ -1,0 +1,30 @@
+
+local words = {
+"sex", "sexy", "girl your sexy", "nigga", "i hate niqgeas", "niggeards", "jew", "your a jew kys", "kys", "Join me so we can have s3x",
+"i have bigbalz", "suck my ", "suck my dok", "porwn", "bornhub", "porncornhub", "i hate jews and niggas", "you are so stupid", "i like minors", "add my dc so we can e sex",
+"Gay", "i hate Gay", "i hate Gays", "Gay fuck", "fuck Gays", "btc", "your fat", "fattie", "buzzy", "lickmybuzzy", "i like my pp going inside you",
+"iamgayfuck", "fuck me", "porn", "pornhub"
+}
+
+
+local function sendMessage(message)
+
+local player = game.Players.LocalPlayer
+if player and player.Character and player.Character:FindFirstChild("Head") then
+local chatService = game:GetService("Chat")
+chatService:Chat(player.Character.Head, message, Enum.ChatColor.Red)
+end
+end
+
+
+local function getRandomWord()
+local randomIndex = math.random(1, #words)
+return words[randomIndex]
+end
+
+
+while true do
+local randomWord = getRandomWord()
+sendMessage(randomWord)
+wait(2) 
+end
